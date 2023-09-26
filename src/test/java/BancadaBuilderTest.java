@@ -26,17 +26,17 @@ class BancadaBuilderTest {
         dataEstimadaColheita = java.sql.Date.valueOf(LocalDate.of(2023,6,24));
         bancadaClone.setDataPrevistaColheita(dataEstimadaColheita);
 
-        assertEquals("Bancada " + bancadaOriginal.getId() +
-                " [Cultura: " + bancadaOriginal.getNomeCultura() +
-                ", Capacidade-Plantio: " + bancadaOriginal.getMaxUnidadesPlantio() +
-                ", Data Plantio: " + bancadaOriginal.getDataPlantioFormatada()+
-                ", Data Estimada Colheita: " + bancadaOriginal.getDataColheitaFormatada(), bancadaOriginal.toString());
+        assertEquals("Bancada " + "0" +
+                " [Cultura: " + "Alface Crespa" +
+                ", Capacidade-Plantio: " + "250" +
+                ", Data Plantio: " + "15/05/2023"+
+                ", Data Estimada Colheita: " + "04/06/2023", bancadaOriginal.toString());
 
-        assertEquals("Bancada " + bancadaClone.getId() +
-                " [Cultura: " + bancadaClone.getNomeCultura() +
-                ", Capacidade-Plantio: " + bancadaClone.getMaxUnidadesPlantio() +
-                ", Data Plantio: " + bancadaClone.getDataPlantioFormatada()+
-                ", Data Estimada Colheita: " + bancadaClone.getDataColheitaFormatada(), bancadaClone.toString());
+        assertEquals("Bancada " + "0" +
+                " [Cultura: " + "Alface Crespa" +
+                ", Capacidade-Plantio: " + "250" +
+                ", Data Plantio: " + "04/06/2023" +
+                ", Data Estimada Colheita: " + "24/06/2023", bancadaClone.toString());
     }
 
 }
