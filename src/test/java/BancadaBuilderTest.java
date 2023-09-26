@@ -20,11 +20,7 @@ class BancadaBuilderTest {
         Date dataEstimadaColheita = java.sql.Date.valueOf(LocalDate.of(2023,6,4));
         bancadaOriginal.setDataPrevistaColheita(dataEstimadaColheita);
 
-        Bancada bancadaClone = bancadaBuilder
-                .setNomeCultura("Alface Crespa")
-                .setMaxUnidadesPlantio(250)
-                .setCapacidadeReservatorio(500)
-                .build();
+        Bancada bancadaClone = bancadaOriginal.clone();
         dataPlantio = java.sql.Date.valueOf(LocalDate.of(2023,6,4));
         bancadaClone.setDataPlantio(dataPlantio);
         dataEstimadaColheita = java.sql.Date.valueOf(LocalDate.of(2023,6,24));
